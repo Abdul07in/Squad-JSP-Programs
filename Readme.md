@@ -6,8 +6,10 @@ Apart from normal html tags there many additional tags that we can use here.**
 
 ---
 
-#### In Jsp we use <%-- --%> for comments
+#### pwd = /home/luser/Ct43/abdul2/JspProgram
 
+---
+#### In Jsp we use <%-- --%> for comments
 ---
 
 ## Jsp Tags
@@ -26,8 +28,33 @@ Apart from normal html tags there many additional tags that we can use here.**
 
 ---
 
+## JSP Life Cycle
+
+#### There are four stages of JSP Life Cycle : 
+
+1. Compilation 
+- Here the jsp page needs to be compiled everytime any changes have been made in the jsp page.
+    * Parse : The Page is first parse and checked for any syntactical errors.
+    * Servlet : A servlet class is created for the jsp page.
+    * Compile : This servlet class is then compiled.
+
+2. Initilization
+- In this stage the jspInit() is called , which creates the objects of the jsp servlet.
+- This method is called only once during the entire life cycle.
+
+3. Execution 
+- In this stage the _jspService() is called which in turn calls the doGet or doPost method of JSP Servlet.
+- According to the code in doGet or doPost the response is generated and sent back to the browser.
+- This method is called each time a new request is sent from browser.
+
+4. CleanUp
+- In this stage the jspDestroy() is called where all the servlet objects are deleted.
+- This method is also called only once at the end of the programs while shutting down.
+
+---
 ## Implicit Objects
 
+**JSP provides many implicit objects which can be used simply by using their reference variables.**
 
 |Object|Type|
 |------|----|
@@ -35,7 +62,31 @@ Apart from normal html tags there many additional tags that we can use here.**
 |request|HttpServletRequest|
 |response|HttpServletResponse|
 |session|HttpSession|
+|pageContext|PageContext|
+|config|ServletConfig|
+|application|ServletContext|
 
+---
+
+### PageContext
+
+While storing the data we ca declare the scope upto which we want to keep the data in pageContext
+	
+PAGE_SCOPE
+- Data stored in this scope will be maintained only in the current page.
+- As soon as the page changes the data will be deleted.
+
+REQUEST_SCOPE
+- Data stored in this scope will be maintained as long as we are using the same request object.
+- This can be done by using forward() or include() of RequestDispatcher.
+- If we use .sendRedirect() or anchor tag then a new request will be sent and the data will be deleted.
+
+SESSION_SCOPE
+- This data will be available until we call session.invaladate().
+- Once the session object is deleted all data for this scope will also deleted.
+
+APPLICATION_SCOPE
+- This data will be available throughout the application until it's stop.
 
 
 

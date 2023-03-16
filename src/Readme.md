@@ -70,6 +70,23 @@ Apart from normal html tags there many additional tags that we can use here.**
 
 ### PageContext
 
+While storing the data we ca declare the scope upto which we want to keep the data in pageContext
+	
+PAGE_SCOPE
+- Data stored in this scope will be maintained only in the current page.
+- As soon as the page changes the data will be deleted.
+
+REQUEST_SCOPE
+- Data stored in this scope will be maintained as long as we are using the same request object.
+- This can be done by using forward() or include() of RequestDispatcher.
+- If we use .sendRedirect() or anchor tag then a new request will be sent and the data will be deleted.
+
+SESSION_SCOPE
+- This data will be available until we call session.invaladate().
+- Once the session object is deleted all data for this scope will also deleted.
+
+APPLICATION_SCOPE
+- This data will be available throughout the application until it's stop.
 
 
 
