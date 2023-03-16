@@ -8,9 +8,6 @@
 <title>Example</title>
 </head>
 <body>
-
-	
-
 	<%!String name = "Squad";
 	int i = 10;
 
