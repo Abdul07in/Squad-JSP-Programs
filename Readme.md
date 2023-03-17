@@ -65,7 +65,7 @@ Apart from normal html tags there many additional tags that we can use here.**
 |pageContext|PageContext|
 |config|ServletConfig|
 |application|ServletContext|
-
+|exception|Throwable|
 ---
 
 ### PageContext
@@ -87,6 +87,29 @@ SESSION_SCOPE
 
 APPLICATION_SCOPE
 - This data will be available throughout the application until it's stop.
+
+
+---
+
+### Exception Handling
+
+- There is possobility that and exception may occur in this page where we are dividing the numbers.
+- So in order to handle the exception we have to declare our exception handling page in the page directive by using the attribute errorPage="MyError.jsp"
+- Here MyPage is the exclusive page created
+
+
+
+---
+
+
+## Directives
+**These are special types of tags used to give more information required on page. : <%@ page %>**
+
+1. page Directive : <%@ page %>
+    * Page related information is given here
+
+2. include Directive : <%@ include %>
+    * This is to include content of any other page
 
 
 
