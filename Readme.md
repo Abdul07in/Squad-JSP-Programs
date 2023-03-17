@@ -109,9 +109,17 @@ APPLICATION_SCOPE
     * Page related information is given here
 
 2. include Directive : <%@ include %>
-    * This is to include content of any other page
+    * This is to include content of any other page in our current page
 
+3. taglib Directive : <%@ taglib %>
+    * This is used to declare what type of jstl tag we are going to use
 
+---
+## Expression Language
+
+* This is an easy way to access the data stored in objects such as session , request , pageContext , etc...
+* We can also do mathematical calculations in it.
+* Syntax => ${...}
 
 
 
