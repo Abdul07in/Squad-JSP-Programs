@@ -121,5 +121,19 @@ APPLICATION_SCOPE
 * We can also do mathematical calculations in it.
 * Syntax => ${...}
 
+## Action Tags
+
+* forward : used to move from one page to another , We can carry data using jsp:param tag.
+
+* include : used to include the contend of another page into the current page.
+
+* useBean : used to create the object of our class on page.
+    * Note : 1. Our class must have default / non-parameter constructor.
+             2. The class must have getters and setters
+             3. The name of all input tag should exactly match the instance variable name to which the value has to be assigned
+
+* setProperty : used to call the setter of the object created by useBean tag
+
+* getProperty : used to call the getters of the object created by useBean tag
 
 

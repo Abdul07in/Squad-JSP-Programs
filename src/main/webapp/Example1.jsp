@@ -8,6 +8,9 @@
 <title>Example</title>
 </head>
 <body>
+	<h1>The Include Name is <%= request.getParameter("person2") %></h1>
+
+
 	<%!String name = "Squad";
 	int i = 10;
 
